@@ -1,6 +1,6 @@
 
-#ifndef HEAP_H
-#define HEAP_H
+#ifndef SOME_HEAP_H
+#define SOME_HEAP_H
 
 // a min heap
 
