@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "some_heap.h"
+#include "heap.h"
 
 #define KEY_NOT_PRESENT -1
 
@@ -103,8 +103,9 @@ void heap_insert(heap_t *heap, heap_key_t key, heap_value_t data) {
 
 heap_value_t heap_remove_min(heap_t *heap) {
     if (heap_size(heap) == 0) {
-        return NULL;
+        return (heap_value_t){.as_int = KEY_NOT_PRESENT};
     }
+
 
     heap_value_t min = heap->data[0].value;
 
