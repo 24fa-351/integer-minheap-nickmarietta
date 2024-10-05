@@ -5,8 +5,14 @@
 // a min heap
 
 typedef unsigned long long heap_key_t;
-typedef void* heap_value_t;
+// typedef void* heap_value_t; conflicting values
 #define HEAP_KEY_FORMAT "%llu"
+
+// union to either an int or pointer value
+typedef union heap_val {
+    unsigned long long as_int;
+    void *as_ptr;
+} heap_value_t;
 
 typedef struct {
     heap_key_t key;
